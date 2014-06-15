@@ -1,0 +1,9 @@
+User state is maintained as 'internal' vs 'openid'
+
+New technologies that I never used before
+1. Google Open Id Sign in
+2. Include js
+3. Qunit testing
+4. Jasypt Password Encryptor
+
+Mention about Test coverage
