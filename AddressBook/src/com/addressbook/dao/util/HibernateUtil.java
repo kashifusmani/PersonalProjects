@@ -11,6 +11,11 @@ import com.addressbook.businessobjects.Auth;
 import com.addressbook.businessobjects.Contact;
 import com.addressbook.businessobjects.User;
 
+/**
+ * Utility class to configure a SessionFactory.
+ * @author kashifu
+ *
+ */
 public class HibernateUtil {
 	private static final Log logger = LogFactory.getLog(HibernateUtil.class);
 	private static SessionFactory sessionFactory;

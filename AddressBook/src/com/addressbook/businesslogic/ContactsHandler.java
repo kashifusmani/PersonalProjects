@@ -7,6 +7,12 @@ import com.addressbook.businessobjects.User;
 import com.addressbook.dao.ContactsDao;
 import com.addressbook.util.ValidationHelper;
 
+/**
+ * ContactsHandler is responsible to perform any business logic
+ * related to Contacts.
+ * @author kashifu
+ *
+ */
 public class ContactsHandler {
 	private ContactsDao contactsDao;
 

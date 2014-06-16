@@ -12,7 +12,12 @@ import org.apache.commons.logging.LogFactory;
 import org.expressme.openid.Association;
 import org.expressme.openid.Endpoint;
 import org.expressme.openid.OpenIdManager;
-
+/**
+ * This servlet is responsible for initiating handshake with OpenId providers (Google, etc)
+ * to facilitate OpenId login.
+ * @author kashifu
+ *
+ */
 public class OpenIdLoginInitializer extends HttpServlet {
 
 	private OpenIdManager manager;
@@ -27,8 +32,6 @@ public class OpenIdLoginInitializer extends HttpServlet {
 		Endpoint endpoint = null;
 		if ("Google".equals(op)) {
 			endpoint = manager.lookupEndpoint("Google");
-		} else if ("Yahoo".equals(op)) {
-			endpoint = manager.lookupEndpoint("Yahoo");
 		} else {
 			response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
 			synchronized (session) {

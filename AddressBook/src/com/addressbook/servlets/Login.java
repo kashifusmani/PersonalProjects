@@ -14,7 +14,11 @@ import com.addressbook.businesslogic.HandlerInitializer;
 import com.addressbook.businesslogic.UserAccountHandler;
 import com.addressbook.businessobjects.User;
 import com.addressbook.servlets.beans.LoginBean;
-
+/**
+ * This servlet is responsible for handling authenitcation requests for internally registared users.
+ * @author kashifu
+ *
+ */
 public class Login extends HttpServlet {
 	private final Log logger = LogFactory.getLog(getClass());
 	private UserAccountHandler userAcctHandler; 

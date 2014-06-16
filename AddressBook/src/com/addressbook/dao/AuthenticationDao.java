@@ -12,6 +12,11 @@ import com.addressbook.businessobjects.Auth;
 import com.addressbook.businessobjects.User;
 import com.addressbook.util.ValidationHelper;
 
+/**
+ * DAO layer to control operations related to user authentication.
+ * @author kashifu
+ *
+ */
 public class AuthenticationDao {
 	private SessionFactory sessionFactory;
 	private final Log logger = LogFactory.getLog(getClass());

@@ -8,6 +8,10 @@ import com.addressbook.dao.UserDao;
 import com.addressbook.dao.util.HibernateUtil;
 import com.addressbook.dao.util.PasswordManager;
 
+/**
+ * Utility class to provide dependency injections. 
+ * Should be removed once Spring framework is in use.
+ */
 public class HandlerInitializer {
 
 	public UserAccountHandler getUserAccountHandler() {

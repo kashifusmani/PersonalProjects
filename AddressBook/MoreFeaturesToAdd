@@ -1,27 +1,6 @@
-1. Better UI
-2. Ability to delete contact
-3. Edit Account details
-4. More sign in providers
-5. Hibernate tests
-6. Persisting of nonce values to prevent replay attacks. 
-7. Responsive web design
-8. Merge previous contacts: if user registered as internal as well
-9. Forgot password
-10. User log in Session timeout
-11. Dependency between front end and backend.
-12. Front end object model
-13. User input validation on backend
-14. Spring use to avoid hacky contructors
-
 
 ////
-Unit tests
-integration tests
-code formatting
-comments in code: in JS Also
-comments about code structure
+
+
+comments in JS code
 fix css
-set up Git repository
-Run on heroku
-- testable javascript
-- Dependency between servlets and .jsp classes

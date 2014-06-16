@@ -15,7 +15,11 @@ import com.addressbook.businesslogic.HandlerInitializer;
 import com.addressbook.businessobjects.Contact;
 import com.addressbook.servlets.beans.EditContactBean;
 import com.addressbook.util.Converter;
-
+/**
+ * This servlet is responsible for handling requests for editing a given Contact.
+ * @author kashifu
+ *
+ */
 public class EditContact extends HttpServlet {
 	private final Log logger = LogFactory.getLog(getClass());
 	private ContactsHandler contactsHandler;

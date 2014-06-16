@@ -4,7 +4,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+/**
+ * Business object class, also used to store userId/password in database.
+ * @author kashifu
+ *
+ */
 @Entity
 @Table(name = "AUTHENTICATION")
 public class Auth {

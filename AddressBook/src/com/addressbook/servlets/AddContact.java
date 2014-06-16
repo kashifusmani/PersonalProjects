@@ -15,7 +15,11 @@ import com.addressbook.businesslogic.HandlerInitializer;
 import com.addressbook.businessobjects.Contact;
 import com.addressbook.servlets.beans.AddContactBean;
 import com.addressbook.util.Converter;
-
+/**
+ * This servlet is responsible for handling requests to Add a new Contact for a User.
+ * @author kashifu
+ *
+ */
 public class AddContact extends HttpServlet {
 	private final Log logger = LogFactory.getLog(getClass());
 	private ContactsHandler contactsHandler;

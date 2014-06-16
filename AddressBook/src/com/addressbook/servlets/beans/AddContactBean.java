@@ -1,5 +1,9 @@
 package com.addressbook.servlets.beans;
-
+/**
+ * This bean is used to transfer user supplied data from "add a contact" form.
+ * @author kashifu
+ *
+ */
 public class AddContactBean {
 	String firstname;
 	String lastname;

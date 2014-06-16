@@ -18,7 +18,11 @@ import org.expressme.openid.OpenIdManager;
 import com.addressbook.businesslogic.HandlerInitializer;
 import com.addressbook.businesslogic.UserAccountHandler;
 import com.addressbook.businessobjects.User;
-
+/**
+ * This servlet is responsible for handling authentication requests for OpenId users. 
+ * @author kashifu
+ *
+ */
 public class OpenIdLogin extends HttpServlet {
 	private static final long ONE_HOUR = 3600000L;
 	static final long TWO_HOUR = ONE_HOUR * 2L;
@@ -71,6 +75,7 @@ public class OpenIdLogin extends HttpServlet {
 	}
 
 	private void checkNonce(String nonce) {
+		logger.info("Nonce is " + nonce);
 		// check response_nonce to prevent replay-attack:
 		if (nonce == null || nonce.length() < 20) {
 			throw new OpenIdException("Verification failed");
@@ -108,11 +113,17 @@ public class OpenIdLogin extends HttpServlet {
 		// TODO: store nonce in database:
 	}
 	
+	//TODO: This should go away after Spring Injection
 	public OpenIdLogin() {
 		manager = new OpenIdManager();
 		manager.setRealm("http://localhost");
 		manager.setReturnTo("http://localhost/AddressBook/OpenIdLogin");
 		HandlerInitializer initializer = new HandlerInitializer();//shud go away
 		userAcctHandler = initializer.getUserAccountHandler();
+	}
+	
+	public OpenIdLogin(OpenIdManager openIdManager, UserAccountHandler userAccountHandler) {
+		this.manager = openIdManager;
+		this.userAcctHandler = userAccountHandler;
 	}
 }

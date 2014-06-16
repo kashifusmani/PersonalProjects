@@ -1,5 +1,10 @@
 package com.addressbook.servlets.beans;
 
+/**
+ * This bean is used to transfer user supplied data from "edit contact" form.
+ * @author kashifu
+ *
+ */
 public class EditContactBean {
 	String firstname;
 	String lastname;

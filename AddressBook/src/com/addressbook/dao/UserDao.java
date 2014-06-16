@@ -10,6 +10,11 @@ import org.hibernate.criterion.Restrictions;
 import com.addressbook.businessobjects.User;
 import com.addressbook.util.ValidationHelper;
 
+/**
+ * DAO layer to control operations related to User.
+ * @author kashifu
+ *
+ */
 public class UserDao {
 	private SessionFactory sessionFactory; 
 	private final Log logger = LogFactory.getLog(getClass());

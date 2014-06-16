@@ -5,7 +5,11 @@ import com.addressbook.businessobjects.User;
 import com.addressbook.servlets.beans.AddContactBean;
 import com.addressbook.servlets.beans.EditContactBean;
 import com.addressbook.servlets.beans.RegistrationBean;
-
+/**
+ * Adapter class to provide conversion between object types.
+ * @author kashifu
+ *
+ */
 public class Converter {
 
 	public static User toUser(RegistrationBean registerBean) {

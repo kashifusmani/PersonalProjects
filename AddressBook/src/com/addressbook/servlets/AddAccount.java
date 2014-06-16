@@ -14,7 +14,11 @@ import com.addressbook.businesslogic.HandlerInitializer;
 import com.addressbook.businesslogic.UserAccountHandler;
 import com.addressbook.servlets.beans.RegistrationBean;
 import com.addressbook.util.Converter;
-
+/**
+ * This Servlet is responsible to handler requests for Adding a new user account.
+ * @author kashifu
+ *
+ */
 public class AddAccount extends HttpServlet {
 
 	private final Log logger = LogFactory.getLog(getClass());

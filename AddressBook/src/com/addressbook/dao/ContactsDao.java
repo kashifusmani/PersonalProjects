@@ -13,7 +13,11 @@ import org.hibernate.criterion.Restrictions;
 import com.addressbook.businessobjects.Contact;
 import com.addressbook.businessobjects.User;
 import com.addressbook.util.ValidationHelper;
-
+/**
+ * DAO layer to control operations related to Contacts.
+ * @author kashifu
+ *
+ */
 public class ContactsDao {
 	private SessionFactory sessionFactory;
 	private final Log logger = LogFactory.getLog(getClass());

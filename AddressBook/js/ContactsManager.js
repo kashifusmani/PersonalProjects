@@ -22,7 +22,7 @@ define([],	function() {
 					var svc = new service.AddressBookService();					
 					svc.getContacts(							
 							function(data) {
-								contactsContentHolder.removeChild(document.getElementById("wait_image"));
+								contactsContentHolder.removeChild(contactsContentHolder.children[0]);
 								if (data.length == 0) {
 									contactsContentHolder.innerHTML = '<p>You do not have any contacts!</p>';
 								} else {
@@ -36,7 +36,6 @@ define([],	function() {
 				}
 
 				function renderData(data) {
-					console.log('going to return');
 					for ( var i = 0; i < data.length; i++) {
 						var contactsDiv = document.createElement('div');
 						contactsDiv.setAttribute("class", "module");

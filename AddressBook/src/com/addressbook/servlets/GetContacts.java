@@ -16,7 +16,11 @@ import com.addressbook.businesslogic.HandlerInitializer;
 import com.addressbook.businessobjects.Contact;
 import com.addressbook.businessobjects.User;
 import com.addressbook.util.JacksonMarshaler;
-
+/**
+ * This servlet is responsible for handling request to Get/Extract contacts for a given User.
+ * @author kashifu
+ *
+ */
 public class GetContacts extends HttpServlet {
 	private final Log logger = LogFactory.getLog(getClass());
 	private ContactsHandler contactsHandler;

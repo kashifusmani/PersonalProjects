@@ -5,7 +5,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+/**
+ * Business object class, also used to store User details in database.
+ * @author kashifu
+ *
+ */
 @Entity
 @Table(name = "USERS")
 public class User {

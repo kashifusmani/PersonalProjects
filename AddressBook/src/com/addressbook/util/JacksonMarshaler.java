@@ -1,7 +1,9 @@
 package com.addressbook.util;
 
 import java.io.IOException;
-import java.util.ArrayList;
+/**
+ * Utility class to convert Java Object to Json String representation.
+ */
 import java.util.List;
 
 import org.apache.commons.logging.Log;

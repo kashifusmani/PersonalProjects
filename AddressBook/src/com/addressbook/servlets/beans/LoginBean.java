@@ -1,5 +1,10 @@
 package com.addressbook.servlets.beans;
 
+/**
+ * This bean is used to transfer user supplied data from "login" form.
+ * @author kashifu
+ *
+ */
 public class LoginBean {
 
 	private String email;

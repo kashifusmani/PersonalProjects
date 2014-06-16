@@ -4,6 +4,11 @@ import org.jasypt.util.password.StrongPasswordEncryptor;
 
 import com.addressbook.util.ValidationHelper;
 
+/**
+ * This class is responsible for encrypting user password and provide authenitcation
+ * @author kashifu
+ *
+ */
 public class PasswordManager {
 	private StrongPasswordEncryptor passwordEncryptor;
 	

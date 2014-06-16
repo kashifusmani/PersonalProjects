@@ -12,6 +12,11 @@ import com.addressbook.dao.UserDao;
 import com.addressbook.dao.util.PasswordManager;
 import com.addressbook.util.ValidationHelper;
 
+/**
+ * This class is responsible to preform Business logic related to User.
+ * @author kashifu
+ *
+ */
 public class UserAccountHandler {
 	private UserDao userDao;
 	private AuthenticationDao authdao;

@@ -6,8 +6,8 @@
 
 2. Environment setup
 	- The application was developed to run on Tomcat 7.0.34 and has been tested against Firefox web browser.
-	- A copy of Tomcat 7.0.34 can be downloaded from ...
-	- The CLASSPATH environment variable should be set to contain 
-		TOMCAT_HOME/lib , TOMCAT_HOME/webapps/AddressBook/WEB-INF/lib and TOMCAT_HOME/webapps/AddressBook/WEB-INF/classes on path 
+	- A copy of Tomcat 7.0.34 can be downloaded from: http://olex.openlogic.com/package_versions/14200/download?package_version_id=7886&path=https%3A%2F%2Folex-secure.openlogic.com%2Fcontent%2Fopenlogic%2Ftomcat%2F7.0.34%2Fopenlogic-tomcat-7.0.34-all-bin-Tarball-1.zip
+	- The $PATH environment variable should be set to contain 
+		TOMCAT_HOME/lib , TOMCAT_HOME/webapps/AddressBook/WEB-INF/lib and TOMCAT_HOME/webapps/AddressBook/WEB-INF/classes , and Java JRE location 
 	
-	
+3. Tested on Ubuntu??
