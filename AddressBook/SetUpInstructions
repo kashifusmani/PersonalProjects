@@ -9,20 +9,22 @@ These instructions are for Ubuntu 12.04 . They may or may not work for other pla
 2. Environment setup
 	- The application was developed to run on Tomcat 7.0.34 and has been tested against Firefox web browser.
 	- A copy of Tomcat 7.0.34 can be downloaded from: http://olex.openlogic.com/package_versions/14200/download?package_version_id=7886&path=https%3A%2F%2Folex-secure.openlogic.com%2Fcontent%2Fopenlogic%2Ftomcat%2F7.0.34%2Fopenlogic-tomcat-7.0.34-all-bin-Tarball-1.zip
-	- The $PATH environment variable should be set to contain 
-		TOMCAT_HOME/lib , TOMCAT_HOME/webapps/AddressBook/WEB-INF/lib and TOMCAT_HOME/webapps/AddressBook/WEB-INF/classes , and Java JRE location 
-      
+ 
 	- Download the code from github, place AddressBook under TOMCAT_HOME/webapps folder
 
     - Edit AddressBook/setUpScript.sh and change APP_HOME and TOMCAT_HOME value appropriately, run/execute setUpScript.sh to setup appropriate classpaths and create binaries
-    
-3. This has been tested on Ubuntu and worked.
 
-4. OpenID/Google Login
+3. OpenID/Google Login
 
 The application supports Open Id login. This is facilitated by a handshake between application and Google.
 Open ID needs to know the Requestor (realm) and who should it return the call to (returnTo).
 These parameters are specified in web.xml <context-param> arguments.
-If running on localhost, nothing needs to be changed. However, if running on a specific named server, 
+If running on localhost and port 80, nothing needs to be changed. However, if running on a specific named server or a different port 
 then values of <param-name>realm</param-name> and <param-name>returnTo</param-name>
-will need to be changed.
+will need to be changed. for example, the new value of <param-name>realm</param-name> could be <param-value>http://example.com:8080</param-value>
+Similarly <param-name>returnTo</param-name> could have a new value of <param-value>http://example.com:8080/AddressBook/OpenIdLogin</param-value>
+
+4. Start the server now. 
+
+5. This has been tested on Ubuntu and worked.
+
