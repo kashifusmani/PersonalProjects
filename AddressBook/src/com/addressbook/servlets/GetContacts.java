@@ -39,7 +39,8 @@ public class GetContacts extends HttpServlet {
 			}
 		} else {
 			User user = new User();
-			user.setUserId((int)session.getAttribute("userId"));
+			Integer integer = (Integer)session.getAttribute("userId");
+			user.setUserId(integer.intValue());
 			List<Contact> contacts = contactsHandler.getContacts(user);
 			String contactsJson = JacksonMarshaler.toJsonString(contacts);
 			response.setStatus(HttpServletResponse.SC_OK);

@@ -1,13 +1,10 @@
 1. Overall Approach:
 
-The project has been designed from the given description: "Ability to log in to the site, create a contact list, and ability to log in using a Gmail account".
-
-
-- Features Implemented:
+- Features Implemented/Use Cases:
 Ability to Create a new account, login, login using Gmail, Add contacts.
 
 - Database Schema Design:
-This project description warranted the state of Users and Contacts to be persisted in the database.
+The Use Cases warranted the state of Users and Contacts to be persisted in the database.
 The website allows users to login from Gmail as well. This means that the registration state has 
 to be maintained (If the user registered via our website or signed from Gmail). If user registered from our website, the application treats it as 
 'internal' user, and 'openid' user otherwise.
@@ -38,7 +35,8 @@ Wherever possible, existing standard libraries have been used to avoid reinventi
 4. Testing
 Backend Java codebase contains 25 classes out of which test cases have been written against 22 classes.
 There is not much code in Javascript,  test cases have been written against ContactsManager.js
-Overall, I am confident that there is greater than 80% line and branch coverage of the codebase.
+Overall, I am confident that there is greater than 85% line and branch coverage of the codebase.
+Manual testing has been performed as well to make sure each function is working as expected.
 
 - New technologies learnt I never used before:
 1. Google Open Id Sign in

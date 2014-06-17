@@ -20,25 +20,25 @@
 	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/junit-4.10.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/mockito-all-1.9.5.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/annotations-api.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/catalina.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/catalina-ant.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/catalina-ha.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/catalina-tribes.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/ecj-4.2.1.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/el-api.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/jasper.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/jasper-el.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/jsp-api.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/mysql-connector-java-5.1.31-bin.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/servlet-api.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/tomcat-api.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/tomcat-coyote.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/tomcat-dbcp.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/tomcat-i18n-es.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/tomcat-i18n-fr.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/tomcat-i18n-ja.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/tomcat-jdbc.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/webapps/AddressBook/WEB-INF/lib/tomcat/tomcat-util.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/annotations-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/catalina.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/catalina-ant.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/catalina-ha.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/catalina-tribes.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/ecj-4.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/el-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/jasper.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/jasper-el.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/mysql-connector-java-5.1.31-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/tomcat-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/tomcat-coyote.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/tomcat-dbcp.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/tomcat-i18n-es.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/tomcat-i18n-fr.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/tomcat-i18n-ja.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/tomcat-jdbc.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/apache-tomcat-7.0.34/lib/tomcat-util.jar"/>
 	<classpathentry kind="output" path="WEB-INF/classes"/>
 </classpath>

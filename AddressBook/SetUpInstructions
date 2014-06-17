@@ -1,5 +1,7 @@
+These instructions are for Ubuntu 12.04 . They may or may not work for other platforms.
+
 1. Database Configuration setup
-	- Install MySQL Server 5.6
+	- Install MySQL Server 5.5
 	- Create a database with name 'test' running on local machine/localhost on port 3306 with username/password : kashifu/kashifu
 	- If you choose run with configuration different than above, please edit AddressBook/src/hibernate.cfg.xml accordingly 
 	- Next, run create table statements under AddressBook/createTable.sql
@@ -9,5 +11,16 @@
 	- A copy of Tomcat 7.0.34 can be downloaded from: http://olex.openlogic.com/package_versions/14200/download?package_version_id=7886&path=https%3A%2F%2Folex-secure.openlogic.com%2Fcontent%2Fopenlogic%2Ftomcat%2F7.0.34%2Fopenlogic-tomcat-7.0.34-all-bin-Tarball-1.zip
 	- The $PATH environment variable should be set to contain 
 		TOMCAT_HOME/lib , TOMCAT_HOME/webapps/AddressBook/WEB-INF/lib and TOMCAT_HOME/webapps/AddressBook/WEB-INF/classes , and Java JRE location 
-	
-3. Tested on Ubuntu??
+      
+	- Download the code from github, place AddressBook under TOMCAT_HOME/webapps folder
+
+    - Edit AddressBook/setUpScript.sh and change APP_HOME and TOMCAT_HOME value appropriately, run/execute setUpScript.sh to setup appropriate classpaths and create binaries
+    
+3. This has been tested on Ubuntu and worked.
+
+KNOWN BUG:
+The application supports Open Id login. This is facilitated by a handshake between application and Google.
+If running on localhost, nothing needs to be changed. However, if running on a specific named server, then code changes will need to be made to 
+src/com/addressbook/servlets/OpenIdLoginInitializer and src/com/addressbook/servlets/OpenIdLogin constructors
+where we will need to change the setRealm() and setReturnTo() accordingly. 
+In the interest of time, I could not do more work to make it look better. However, this needs to be corrected in longer run.

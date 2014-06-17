@@ -10,14 +10,17 @@
 	<div id="main">
 		<div id="topmain"><h2>Login</h2></div>
 		<!-- Menu -->
-		<div class="headermodule"> <a href="jsp/registration_form.jsp"> Register for a new account </a> </div>
+		<div class="headermodule"> <a href="jsp/registration_form.jsp"> Register for a new account </a>
 			<p>	<% 
 					if(session.getAttribute("message")!= null) {
 						out.println(session.getAttribute("message"));
+						session.setAttribute("message", null);
 					}
 				%>
 				
 			</p>
+		 </div>
+			
 		<div id="form-left">
 			<form  id="login_form" method="post" action="jsp/login.jsp">			
 				<div class="module">

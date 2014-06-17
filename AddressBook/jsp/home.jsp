@@ -17,10 +17,10 @@
 		</div>
 		<div class="headermodule"> 
 				<p>  <% if(session.getAttribute("email")!= null) {
-						out.print("Hello "+session.getAttribute("email")+"\n"); 
+							out.print("Hello "+session.getAttribute("email")+"\n"); 
 						} else {
-						session.setAttribute("message", "Please Login");
-				        response.sendRedirect("../login_form.jsp");
+							session.setAttribute("message", "Please Login");
+				       	 	response.sendRedirect("../login_form.jsp");
 						} 
 					%> 
 			</p>

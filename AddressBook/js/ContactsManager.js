@@ -1,9 +1,14 @@
 define([],	function() {
 			'use strict';
+			/**
+			 * This module is responsible for making service call to fetch contacts and rendering them.
+			 */
 			var exports = {};
 
 			exports.ContactsManager = function (service, contactsContentHolder) {	
-				
+				/**
+				 * This module is responsible to make a service call and render the content.
+				 */
 				this.getExistingContacts = function() {
 					// display wait image until service call does not returns
 					var waitImageDiv = document.createElement('div'); 
@@ -58,13 +63,22 @@ define([],	function() {
 						contactsContentHolder.appendChild(contactsDiv);
 					}
 				}
-
+				/**
+				 * This function is responsible to provide a callback handler when the 'Edit Contact' button
+				 * would be clicked.
+				 * @param data The input data callback function
+				 * @returns {Function}
+				 */
 				function copyContactValues(data) {
 					return function() {
 						copyContactValuesToForm(data);
 					}
 				}
-
+				
+				/**
+				 * This is the actual callback function that is called back when 'Edit Contact' button is clicked.
+				 * @param contactData Contact data that is copied to Edit Contact form.
+				 */
 				function copyContactValuesToForm(contactData) {
 					$('#editFirstname').val(contactData.firstname);
 					$('#editLastname').val(contactData.lastname);

@@ -51,7 +51,7 @@ public class Login extends HttpServlet {
 				session.setAttribute("message", loginFailure);
 			}
 			try {
-				response.sendRedirect("login_form.jsp");
+				response.sendRedirect("../login_form.jsp");
 			} catch (IOException e) {
 				logger.error(e.getMessage());
 			}
