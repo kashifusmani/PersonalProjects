@@ -18,9 +18,11 @@ These instructions are for Ubuntu 12.04 . They may or may not work for other pla
     
 3. This has been tested on Ubuntu and worked.
 
-KNOWN BUG:
+4. OpenID/Google Login
+
 The application supports Open Id login. This is facilitated by a handshake between application and Google.
-If running on localhost, nothing needs to be changed. However, if running on a specific named server, then code changes will need to be made to 
-src/com/addressbook/servlets/OpenIdLoginInitializer and src/com/addressbook/servlets/OpenIdLogin constructors
-where we will need to change the setRealm() and setReturnTo() accordingly. 
-In the interest of time, I could not do more work to make it look better. However, this needs to be corrected in longer run.
+Open ID needs to know the Requestor (realm) and who should it return the call to (returnTo).
+These parameters are specified in web.xml <context-param> arguments.
+If running on localhost, nothing needs to be changed. However, if running on a specific named server, 
+then values of <param-name>realm</param-name> and <param-name>returnTo</param-name>
+will need to be changed.

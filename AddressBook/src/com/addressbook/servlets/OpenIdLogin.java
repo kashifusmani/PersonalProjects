@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -113,15 +116,26 @@ public class OpenIdLogin extends HttpServlet {
 		// TODO: store nonce in database:
 	}
 	
-	//TODO: This should go away after Spring Injection
-	public OpenIdLogin() {
-		manager = new OpenIdManager();
-		manager.setRealm("http://localhost");
-		manager.setReturnTo("http://localhost/AddressBook/OpenIdLogin");
-		HandlerInitializer initializer = new HandlerInitializer();//shud go away
-		userAcctHandler = initializer.getUserAccountHandler();
-	}
-	
+	public void init(ServletConfig config) {
+		 try {
+			super.init(config);
+		} catch (ServletException e) {
+			logger.error(e.getMessage(), e);
+		}
+		 ServletContext context = getServletContext();
+		 String  realm = context.getInitParameter("realm");
+		 String  returnTo = context.getInitParameter("returnTo");
+		 manager = new OpenIdManager();
+		 manager.setRealm(realm);
+		 manager.setReturnTo(returnTo);
+		 HandlerInitializer initializer = new HandlerInitializer();
+		 userAcctHandler = initializer.getUserAccountHandler();
+	 }
+	 
+	//ServletContext needs a no argument constructor 
+	public OpenIdLogin() {} 
+	 
+	//This is for facilitating mock testing
 	public OpenIdLogin(OpenIdManager openIdManager, UserAccountHandler userAccountHandler) {
 		this.manager = openIdManager;
 		this.userAcctHandler = userAccountHandler;
