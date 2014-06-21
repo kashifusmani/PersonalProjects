@@ -11,12 +11,12 @@
   	</context-param>
   	<context-param>
     	<param-name>returnTo</param-name>
-    	<param-value>http://localhost/AddressBook/OpenIdLogin</param-value>
+    	<param-value>http://localhost/FileUploader/OpenIdLogin</param-value>
   	</context-param>
 
 	<servlet>
 		<servlet-name>AddAccount</servlet-name>
-		<servlet-class>com.addressbook.servlets.AddAccount</servlet-class>
+		<servlet-class>com.fileuploader.servlets.AddAccount</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
@@ -27,7 +27,7 @@
 
 	<servlet>
 		<servlet-name>Login</servlet-name>
-		<servlet-class>com.addressbook.servlets.Login</servlet-class>
+		<servlet-class>com.fileuploader.servlets.Login</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -36,38 +36,8 @@
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>AddContact</servlet-name>
-		<servlet-class>com.addressbook.servlets.AddContact</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>AddContact</servlet-name>
-		<url-pattern>/AddContact</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>GetContacts</servlet-name>
-		<servlet-class>com.addressbook.servlets.GetContacts</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>GetContacts</servlet-name>
-		<url-pattern>/GetContacts</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>EditContact</servlet-name>
-		<servlet-class>com.addressbook.servlets.EditContact</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>EditContact</servlet-name>
-		<url-pattern>/EditContact</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
 		<servlet-name>OpenIdLoginInitializer</servlet-name>
-		<servlet-class>com.addressbook.servlets.OpenIdLoginInitializer</servlet-class>
+		<servlet-class>com.fileuploader.servlets.OpenIdLoginInitializer</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -77,7 +47,7 @@
 	
 	<servlet>
 		<servlet-name>OpenIdLogin</servlet-name>
-		<servlet-class>com.addressbook.servlets.OpenIdLogin</servlet-class>
+		<servlet-class>com.fileuploader.servlets.OpenIdLogin</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -87,7 +57,7 @@
 	
 	<servlet>
 		<servlet-name>UploadFile</servlet-name>
-		<servlet-class>com.addressbook.servlets.UploadFile</servlet-class>
+		<servlet-class>com.fileuploader.servlets.UploadFile</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -97,7 +67,7 @@
 	
 		<servlet>
 		<servlet-name>GetLastUploadExpenseSummary</servlet-name>
-		<servlet-class>com.addressbook.servlets.GetLastUploadExpenseSummary</servlet-class>
+		<servlet-class>com.fileuploader.servlets.GetLastUploadExpenseSummary</servlet-class>
 	</servlet>
 
 	<servlet-mapping>

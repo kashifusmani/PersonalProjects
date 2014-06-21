@@ -5,15 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head> 
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title> AddressBook </title>		
+		<title> FileUploader </title>		
 		<script data-main="../js/mainHome" src="../js/require.js"></script>
 		<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"></link>
-		<link rel="stylesheet" href="../css/adBook.css" type="text/css"></link>
+		<link rel="stylesheet" href="../css/uploader.css" type="text/css"></link>
 	
 	</head>
 <body>
 	<div id="main">
-		<div id="topmain"><h2>Welcome to AddressBook. Cloud based contacts manager.</h2>
+		<div id="mainHeader"><h2>Welcome to Wave. Please upload your data.</h2>
 		</div>
 		<div class="headermodule"> 
 				<p>  <% if(session.getAttribute("email")!= null) {
@@ -33,7 +33,7 @@
 					%> 
 			</p>		
 		</div>
-		<div id="left">	
+		<div id="userActions">	
 			<p>Select file to upload:</p>		
 			<form  id="fileUploadForm" action="../UploadFile" method="post" enctype="multipart/form-data">
 				<div class="module">
@@ -43,29 +43,22 @@
 						<input type="submit" value="Upload">
 					</div>
 				</div>
-			</form>
-			<p>Existing Contacts</p>
-			<div  id="existingContacts"> 
-				
-			</div>
+			</form>			
 		</div>
-		<div id="editcontact_div" style="display:none">
-			<p>Edit contact</p>	
-			<form  id="editcontact_form" action="edit_contact.jsp" method="post">
-				<div class="module">
-					<div class="form-row"><span class="form-label">First Name*  </span><input type="text" id="editFirstname" name="firstname" ></input> </div>
-					<div class="form-row"><span class="form-label">Last Name*  </span><input type="text" id="editLastname" name="lastname" ></input> </div>
-					<div class="form-row"><span class="form-label">Phone* </span><input type="phone" id="editPhone" name="phone" ></input></div>
-					<input type="hidden" id ="editUserId" name="userId" />
-					<input type="hidden" id ="editContactId" name="contactId" />
-					<div class="form-row">
-						<input type="submit" value="Submit">&nbsp;
-						<input type="reset">
-					</div>
-				</div>
-			</form>
-		</div>			
 		
-	</div>
-	</body>
+		<div id="summary_div" >
+			<table id="summaryTable" class="module" style="display:none">
+				<tr>
+					<th><b>Month</b></th>
+					<th><b>Year</b></th>
+					<th><b>Total Pre-tax amount</b></th>
+					<th><b>Total tax amount</b></th>
+					<th><b>Grand Total</b></th>
+				</tr>
+			</table>					
+		</div>
+			
+	</div>			
+
+</body>
 </html>

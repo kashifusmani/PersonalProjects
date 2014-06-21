@@ -3,12 +3,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head> 
 		<script data-main="../js/mainLoginRegister" src="../js/require.js"></script>
-		<link rel="stylesheet" href="../css/adBook.css" type="text/css"></link>
-	<title> AddressBook </title>		
+		<link rel="stylesheet" href="../css/uploader.css" type="text/css"></link>
+	<title> FileUploader </title>		
 	</head>
 <body>
 	<div id="main">
-		<div id="topmain"><h2>Register for a New Account</h2></div>
+		<div id="mainHeader"><h2>Register for a New Account</h2></div>
 		<!-- Menu -->
 		<div class="headermodule"> <a href="../login_form.jsp"> Login </a>
 			<p>	<% 
