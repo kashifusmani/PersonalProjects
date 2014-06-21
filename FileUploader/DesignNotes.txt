@@ -1,0 +1,68 @@
+1. Overall Approach:
+
+- Features Implemented/Use Cases:
+Ability to Create a new account, login, login using Gmail, Add contacts.
+
+- Database Schema Design:
+The Use Cases warranted the state of Users and Contacts to be persisted in the database.
+The website allows users to login from Gmail as well. This means that the registration state has 
+to be maintained (If the user registered via our website or signed from Gmail). If user registered from our website, the application treats it as 
+'internal' user, and 'openid' user otherwise.
+
+- Service APIs: The following APIs are provided so that frontend/client side can easily query the required data
+1. Add new account
+2. Add/Edit a contact for a give user
+3. Get contacts for a user
+4. Login an 'internal' user
+5. Login an 'openid' user. 
+
+- Code Design:
+1. Object Oriented Principles:
+The code has been designed using Object Oriented Principles in mind. It uses Objects to manipulate data as opposed to passing around primitive datatypes.
+Objects used are located under (com.addressbook.businessobjects and com.addressbook.servlets.beans)
+
+2. MVC:
+MVC approach is implemented by separating the View ( Javascript and Servlets), Controller (classes in com.addressbook.businesslogic) and
+and Model ( classes in com.addressbook.dao).  
+
+3. External Libraries
+Wherever possible, existing standard libraries have been used to avoid reinventing the wheel. This includes the following
+	- Jasypt : To encrypt and authenticate user supplied passwords
+	- Hibernate: To avoid writing SQL statements by hand and avoid SQL Injections
+	- JacksonMarshaler: To convert server response in json before sending to client
+	- Log4J : To log information during code execution.
+
+4. Testing
+Backend Java codebase contains 25 classes out of which test cases have been written against 22 classes.
+There is not much code in Javascript,  test cases have been written against ContactsManager.js
+Overall, I am confident that there is greater than 85% line and branch coverage of the codebase.
+Manual testing has been performed as well to make sure each function is working as expected.
+
+- New technologies learnt I never used before:
+1. Google Open Id Sign in
+2. Include js
+3. Qunit testing
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Given more time I would have implemented the following features:
+
+1. Responsive UI design for mobile/tablets.
+2. Ability to delete contact
+3. Edit Account details
+4. More sign in providers
+5. Persisting of nonce values to prevent replay attacks. 
+6. Merge Gmail contacts for single sign-on users.
+7. Forgot password
+
+How much time it would have taken? I guess that depends on feature. But I would say 1 hour of work for each feature.
+
+Given more time, I would have done the following to make the project more robust.
+1. Set session timeout value after user logs in.
+2. Add object model to frontend/javascript code
+3. User input validation on backend. For example "email" is always in proper format (currently I check only if its not blank) 
+4. All Servlets have two contructors. The no argument constructor is used by Tomcat/Production code. The argument one has been written to 
+facilitate mock testing. In long run, this should be solved by using Spring Dependency Injection.
+5. Due to time contraints, I was not able to write Integration tests.
+6. Currently, there is some kind of dependency between Servlets and JSPs. For example, Login.java redirects to "home.jsp" on successful login.
+It may not look as bad, but I feel that backend should not know anything about front end at all.
+7. Add permissions model to tables in database.
