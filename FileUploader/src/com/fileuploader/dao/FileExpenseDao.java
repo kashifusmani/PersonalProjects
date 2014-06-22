@@ -16,6 +16,11 @@ import com.fileuploader.businessobjects.User;
 import com.fileuploader.businessobjects.UserFileMap;
 import com.fileuploader.util.ValidationHelper;
 
+/**
+ * This class is responsible for carrying out any actions related to data that user uploads via File.
+ * @author kashifu
+ *
+ */
 public class FileExpenseDao {
 	private SessionFactory sessionFactory;
 	private final Log logger = LogFactory.getLog(getClass());
@@ -42,6 +47,10 @@ public class FileExpenseDao {
 		return map;
 	}
 	
+	/**
+	 * insertExpenseEntries inserts new entries in FILE_EXPENSE_ENTRIES table
+	 * @param expenseEntries the entries to be inserted
+	 */
 	public void insertExpenseEntries(List<ExpenseEntry> expenseEntries) {
 		ValidationHelper.validateForNull(expenseEntries, "expenseEntries");
 		logger.info("Inserting new expense entries: " + expenseEntries);
@@ -54,6 +63,11 @@ public class FileExpenseDao {
 		session.close();		
 	}
 	
+	/**
+	 * getLatestFileMap extracts latest file upload entry for given user from USER_FILE_MAPPINGS table
+	 * @param user the user to extract the file entry for.
+	 * @return
+	 */
 	public UserFileMap getLatestFileMap(User user) {
 		ValidationHelper.validateForNull(user, "user");
 		//select max fileId where userId = userId
@@ -77,6 +91,11 @@ public class FileExpenseDao {
 		return map;
 	}
 	
+	/**
+	 * getExpenseEntries retrieve all the expense entries for user:file represented by UserFileMap
+	 * @param map the mapping which contains userId:fileId for which we want to extract expense entrues
+	 * @return
+	 */
 	public List<MonthlyExpense> getExpenseEntries(UserFileMap map) {
 		ValidationHelper.validateForNull(map, "map");
 		logger.info("Retrieving ExpenseEntries for " + map);
@@ -88,7 +107,6 @@ public class FileExpenseDao {
 		SQLQuery query = session.createSQLQuery(queryStr);
 		query.setParameter("file_id", map.getId());
 		
-		//logger.info(query.list());
 		List<Object[]> rows = query.list();
 		List<MonthlyExpense> result = new ArrayList<MonthlyExpense>();
 		for (Object[] row: rows) {

@@ -12,7 +12,7 @@ These instructions are for Ubuntu 12.04 . They may or may not work for other pla
  
 	- Download the code from github, place AddressBook under TOMCAT_HOME/webapps folder
 
-    - Edit AddressBook/setUpScript.sh and change APP_HOME and TOMCAT_HOME value appropriately, run/execute setUpScript.sh to setup appropriate classpaths and create binaries
+    - Edit FileUploader/setUpScript.sh and change APP_HOME and TOMCAT_HOME value appropriately, run/execute setUpScript.sh to setup appropriate classpaths and create binaries
 
 3. OpenID/Google Login
 
@@ -21,10 +21,15 @@ Open ID needs to know the Requestor (realm) and who should it return the call to
 These parameters are specified in web.xml <context-param> arguments.
 If running on localhost and port 80, nothing needs to be changed. However, if running on a specific named server or a different port 
 then values of <param-name>realm</param-name> and <param-name>returnTo</param-name>
-will need to be changed. for example, the new value of <param-name>realm</param-name> could be <param-value>http://example.com:8080</param-value>
+will need to be changed. For example, the new value of <param-name>realm</param-name> could be <param-value>http://example.com:8080</param-value>
 Similarly <param-name>returnTo</param-name> could have a new value of <param-value>http://example.com:8080/AddressBook/OpenIdLogin</param-value>
 
 4. Start the server now. 
 
 5. This has been tested on Ubuntu and worked.
 
+6. Website should be accessible at http://localhost/FileUploader
+
+7. Javascript test cases should be accessible at http://localhost/FileUploader/js/tests/tests.html
+
+8. Please note that data in uploaded file should follow column length constraints as defined during table creation times. The upload may fail otherwise.

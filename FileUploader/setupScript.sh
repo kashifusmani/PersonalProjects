@@ -2,10 +2,12 @@ APP_HOME="/home/likewise-open/ANT/kashifu/Desktop/tomcat-7.0.34/apache-tomcat-7.
 TOMCAT_HOME="/home/likewise-open/ANT/kashifu/Desktop/tomcat-7.0.34/apache-tomcat-7.0.34"
 export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/antlr-2.7.7.jar
 export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/commons-collections-3.2.1.jar
+export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/commons-fileupload-1.3.1.jar
+export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/commons-io-2.4.jar
 export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/commons-lang3-3.3.2.jar
 export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/commons-lang3-3.3.2-javadoc.jar
 export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/commons-logging-1.1.3.jar
-export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/commons-logging-1.1.3.jar
+export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/dom4j-1.6.1.jar
 export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/hibernate-commons-annotations-4.0.1.Final.jar
 export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/hibernate-core-4.0.1.Final.jar
 export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar
@@ -17,9 +19,8 @@ export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/jboss-transaction-api_1.1_spec
 export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/jopenid-1.07.jar
 export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/junit-4.10.jar
 export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/mockito-all-1.9.5.jar
-export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/mysql-connector-java-5.1.31-bin.
-
-
+export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/mysql-connector-java-5.1.31-bin
+export CLASSPATH=$CLASSPATH:$APP_HOME/WEB-INF/lib/super-csv-2.2.0.jar
 
 export CLASSPATH=$CLASSPATH:$TOMCAT_HOME/lib/annotations-api.jar
 export CLASSPATH=$CLASSPATH:$TOMCAT_HOME/lib/catalina.jar
@@ -46,11 +47,11 @@ rm -rf $APP_HOME/WEB-INF/classes/*
 cp $APP_HOME/src/hibernate.cfg.xml $APP_HOME/WEB-INF/classes/hibernate.cfg.xml
 
 
-javac $APP_HOME/src/com/addressbook/businessobjects/*.java -d $APP_HOME/WEB-INF/classes
-javac $APP_HOME/src/com/addressbook/servlets/beans/*.java -d $APP_HOME/WEB-INF/classes
+javac $APP_HOME/src/com/fileuploader/businessobjects/*.java -d $APP_HOME/WEB-INF/classes
+javac $APP_HOME/src/com/fileuploader/servlets/beans/*.java -d $APP_HOME/WEB-INF/classes
 cd $APP_HOME/src
-javac $APP_HOME/src/com/addressbook/util/*.java -d $APP_HOME/WEB-INF/classes
-javac $APP_HOME/src/com/addressbook/dao/util/*.java -d $APP_HOME/WEB-INF/classes
-javac $APP_HOME/src/com/addressbook/dao/*.java -d $APP_HOME/WEB-INF/classes
-javac $APP_HOME/src/com/addressbook/businesslogic/*.java -d $APP_HOME/WEB-INF/classes
-javac $APP_HOME/src/com/addressbook/servlets/*.java -d $APP_HOME/WEB-INF/classes
+javac $APP_HOME/src/com/fileuploader/util/*.java -d $APP_HOME/WEB-INF/classes
+javac $APP_HOME/src/com/fileuploader/dao/util/*.java -d $APP_HOME/WEB-INF/classes
+javac $APP_HOME/src/com/fileuploader/dao/*.java -d $APP_HOME/WEB-INF/classes
+javac $APP_HOME/src/com/fileuploader/businesslogic/*.java -d $APP_HOME/WEB-INF/classes
+javac $APP_HOME/src/com/fileuploader/servlets/*.java -d $APP_HOME/WEB-INF/classes

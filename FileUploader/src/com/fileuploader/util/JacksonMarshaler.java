@@ -9,11 +9,15 @@ import org.codehaus.jackson.map.ObjectMapper;
 
 import com.fileuploader.businessobjects.MonthlyExpense;
 
+/**
+ * Utility class to provide methods to convert Object to json representation and vice-versa.
+ * @author kashifu
+ *
+ */
 public class JacksonMarshaler {
 	private static final Log logger = LogFactory.getLog(JacksonMarshaler.class);
 
-	public static String toMonthlyExpenseListJsonString(
-			List<MonthlyExpense> monthlyExpenseList) {
+	public static String toMonthlyExpenseListJsonString(List<MonthlyExpense> monthlyExpenseList) {
 		ObjectMapper mapper = new ObjectMapper();
 		String json = null;
 		try {

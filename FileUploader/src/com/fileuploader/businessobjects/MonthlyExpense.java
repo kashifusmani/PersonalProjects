@@ -2,6 +2,11 @@ package com.fileuploader.businessobjects;
 
 import java.math.BigDecimal;
 
+/**
+ * This bean is responsible to carry monthly expense data as per the requirements of assignment.
+ * @author kashifu
+ *
+ */
 public class MonthlyExpense {
 	private String month;
 	private String year;

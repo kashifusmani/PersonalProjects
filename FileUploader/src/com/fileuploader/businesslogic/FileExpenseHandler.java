@@ -9,6 +9,11 @@ import com.fileuploader.businessobjects.UserFileMap;
 import com.fileuploader.dao.FileExpenseDao;
 import com.fileuploader.util.ValidationHelper;
 
+/**
+ * This class is responsible to perform any business logic of fetching expense data via DAO
+ * @author kashifu
+ *
+ */
 public class FileExpenseHandler {
 	private FileExpenseDao fileExpenseDao;
 

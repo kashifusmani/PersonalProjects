@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Business object class, also used to represent each row of user input file
+ * This bean is used to represent each row of user input file as it should be stored in database
  * 
  * @author kashifu
  * 

@@ -34,7 +34,7 @@
 			</p>		
 		</div>
 		<div id="userActions">	
-			<p>Select file to upload:</p>		
+			<p><b>Select file to upload:</b></p>		
 			<form  id="fileUploadForm" action="../UploadFile" method="post" enctype="multipart/form-data">
 				<div class="module">
 					<div class="form-row"><span class="form-label"/><input type="file" id="filename" name="filename" /> </div>
@@ -44,9 +44,9 @@
 					</div>
 				</div>
 			</form>			
-		</div>
-		
-		<div id="summary_div" >
+		</div>		
+		<div id="summary_div" >		
+			<p><b>Summary of last upload: </b></p>		
 			<table id="summaryTable" class="module" style="display:none">
 				<tr>
 					<th><b>Month</b></th>

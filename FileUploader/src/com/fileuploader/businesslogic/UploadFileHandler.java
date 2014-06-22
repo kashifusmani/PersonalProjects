@@ -41,6 +41,11 @@ public class UploadFileHandler {
 		this.fileExpenseDao = fileExpenseDao;
 	}
 	
+	/**
+	 * processFile process a new upload by a user
+	 * @param user the user who made the upload
+	 * @param fileItem the actual payload of the upload
+	 */
 	public void processFile (User user, FileItem fileItem) {
 		ValidationHelper.validateForNull(user, "user");
 		ValidationHelper.validateForNull(fileItem, "fileItem");

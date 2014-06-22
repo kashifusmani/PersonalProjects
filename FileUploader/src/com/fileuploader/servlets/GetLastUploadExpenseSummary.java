@@ -18,6 +18,11 @@ import com.fileuploader.businessobjects.MonthlyExpense;
 import com.fileuploader.businessobjects.User;
 import com.fileuploader.util.JacksonMarshaler;
 
+/**
+ * This servlet is responsible to provide expense data as requested by the user
+ * @author kashifu
+ *
+ */
 public class GetLastUploadExpenseSummary extends HttpServlet {
 	private final Log logger = LogFactory.getLog(getClass());
 	private FileExpenseHandler fileExpenseHandler;

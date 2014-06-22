@@ -15,10 +15,10 @@ require.config({
 });
 
 // require the unit tests.
-require([ 'QUnit', 'ContactsManagerTests' ], function(QUnit,
-		contactsManagerTests) {
+require([ 'QUnit', 'ExpenseManagerTests' ], function(QUnit,
+		expenseManagerTests) {
 	// run the tests.
-	contactsManagerTests.run();
+	expenseManagerTests.run();
 	// start QUnit.
 	QUnit.load();
 	QUnit.start();

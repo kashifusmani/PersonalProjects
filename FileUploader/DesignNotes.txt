@@ -1,7 +1,7 @@
 1. Overall Approach:
 
 - Features Implemented/Use Cases:
-Ability to Create a new account, login, login using Gmail, Add contacts.
+Ability to Create a new account, login, login using Gmail, Upload a file.
 
 - Database Schema Design:
 The Use Cases warranted the state of Users and Contacts to be persisted in the database.
@@ -11,19 +11,19 @@ to be maintained (If the user registered via our website or signed from Gmail). 
 
 - Service APIs: The following APIs are provided so that frontend/client side can easily query the required data
 1. Add new account
-2. Add/Edit a contact for a give user
-3. Get contacts for a user
-4. Login an 'internal' user
-5. Login an 'openid' user. 
+2. Login an 'internal' user
+3. Login an 'openid' user. 
+4. Uplaod a new file
+5. Query for Expense details
 
 - Code Design:
 1. Object Oriented Principles:
 The code has been designed using Object Oriented Principles in mind. It uses Objects to manipulate data as opposed to passing around primitive datatypes.
-Objects used are located under (com.addressbook.businessobjects and com.addressbook.servlets.beans)
+Objects used are located under (com.fileuploader.businessobjects and com.fileuploader.servlets.beans)
 
 2. MVC:
-MVC approach is implemented by separating the View ( Javascript and Servlets), Controller (classes in com.addressbook.businesslogic) and
-and Model ( classes in com.addressbook.dao).  
+MVC approach is implemented by separating the View ( Javascript and Servlets), Controller (classes in com.fileuploader.businesslogic) and
+and Model ( classes in com.fileuploader.dao).  
 
 3. External Libraries
 Wherever possible, existing standard libraries have been used to avoid reinventing the wheel. This includes the following
@@ -33,28 +33,23 @@ Wherever possible, existing standard libraries have been used to avoid reinventi
 	- Log4J : To log information during code execution.
 
 4. Testing
-Backend Java codebase contains 25 classes out of which test cases have been written against 22 classes.
+Backend Java codebase contains 26 classes out of which test cases have been written against 22 classes.
 There is not much code in Javascript,  test cases have been written against ContactsManager.js
 Overall, I am confident that there is greater than 85% line and branch coverage of the codebase.
 Manual testing has been performed as well to make sure each function is working as expected.
 
-- New technologies learnt I never used before:
-1. Google Open Id Sign in
-2. Include js
-3. Qunit testing
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Given more time I would have implemented the following features:
 
 1. Responsive UI design for mobile/tablets.
-2. Ability to delete contact
+2. Ability to add/upload multiple files
 3. Edit Account details
 4. More sign in providers
 5. Persisting of nonce values to prevent replay attacks. 
-6. Merge Gmail contacts for single sign-on users.
-7. Forgot password
+6. Merge Gmail spreadsheets documents for single sign-on users.
+7. Forgot password feature
 
-How much time it would have taken? I guess that depends on feature. But I would say 1 hour of work for each feature.
 
 Given more time, I would have done the following to make the project more robust.
 1. Set session timeout value after user logs in.

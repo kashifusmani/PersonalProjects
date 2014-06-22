@@ -1,5 +1,12 @@
 package com.fileuploader.servlets.beans;
 
+/** 
+ * This bean is responsible to represent each row of the input file (as is) uploaded by the user.
+ * For example, the date and monetary values are stored in as Strings as opposed to actual datatypes like 
+ * Date or BigDecimal.
+ * @author kashifu
+ *
+ */
 public class ExpenseCsvEntry {
 
 	/**

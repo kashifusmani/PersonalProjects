@@ -29,6 +29,6 @@ create table FILE_EXPENSE_ENTRIES (
 	expenseDescription varchar(50) not null,
 	preTaxAmount NUMERIC(10,2) not null,
 	taxName varchar(50) not null,
-	taxAmount NUMERIC(5,2) not null,
+	taxAmount NUMERIC(7,2) not null,
 	foreign key(fileId) references USER_FILE_MAPPINGS(id)
 );
