@@ -3,16 +3,18 @@ These instructions are for Ubuntu 12.04 . They may or may not work for other pla
 1. Database Configuration setup
 	- Install MySQL Server 5.5
 	- Create a database with name 'test' running on local machine/localhost on port 3306 with username/password : kashifu/kashifu
-	- If you choose run with configuration different than above, please edit AddressBook/src/hibernate.cfg.xml accordingly 
-	- Next, run create table statements under AddressBook/createTable.sql
+	- If you choose run with configuration different than above, please edit FileUploader/src/hibernate.cfg.xml accordingly 
+	- Next, run create table statements under FileUploader/createTable.sql
 
 2. Environment setup
 	- The application was developed to run on Tomcat 7.0.34 and has been tested against Firefox web browser.
 	- A copy of Tomcat 7.0.34 can be downloaded from: http://olex.openlogic.com/package_versions/14200/download?package_version_id=7886&path=https%3A%2F%2Folex-secure.openlogic.com%2Fcontent%2Fopenlogic%2Ftomcat%2F7.0.34%2Fopenlogic-tomcat-7.0.34-all-bin-Tarball-1.zip
  
-	- Download the code from github, place AddressBook under TOMCAT_HOME/webapps folder
+	- Download the code from github, place FileUploader under TOMCAT_HOME/webapps folder
 
-    - Edit FileUploader/setUpScript.sh and change APP_HOME and TOMCAT_HOME value appropriately, run/execute setUpScript.sh to setup appropriate classpaths and create binaries
+    - Edit FileUploader/setUpScript.sh and change APP_HOME and TOMCAT_HOME value appropriately with absolute paths.
+       APP_HOME should be absolute path of webapps/FileUploader folder.
+       Run/execute setUpScript.sh to setup appropriate classpaths and create binaries. You may need to chmod to make it executable.
 
 3. OpenID/Google Login
 
@@ -22,13 +24,13 @@ These parameters are specified in web.xml <context-param> arguments.
 If running on localhost and port 80, nothing needs to be changed. However, if running on a specific named server or a different port 
 then values of <param-name>realm</param-name> and <param-name>returnTo</param-name>
 will need to be changed. For example, the new value of <param-name>realm</param-name> could be <param-value>http://example.com:8080</param-value>
-Similarly <param-name>returnTo</param-name> could have a new value of <param-value>http://example.com:8080/AddressBook/OpenIdLogin</param-value>
+Similarly <param-name>returnTo</param-name> could have a new value of <param-value>http://example.com:8080/FileUploader/OpenIdLogin</param-value>
 
 4. Start the server now. 
 
 5. This has been tested on Ubuntu and worked.
 
-6. Website should be accessible at http://localhost/FileUploader
+6. Website should be accessible at http://localhost/FileUploader (if running on port 80)
 
 7. Javascript test cases should be accessible at http://localhost/FileUploader/js/tests/tests.html
 

@@ -103,10 +103,11 @@ public class FileExpenseDao {
 		session.beginTransaction();
 		
 		String queryStr = "select monthname(expenseDate), year(expenseDate), sum(preTaxAmount), sum(taxAmount) , sum(preTaxAmount) + sum(taxAmount) as totalExpense "
-				+ "from file_expense_entries where fileId = :file_id group by year(expenseDate), month(expenseDate) ";
+				+ "from FILE_EXPENSE_ENTRIES where fileId = :file_id group by year(expenseDate), month(expenseDate) ";
 		SQLQuery query = session.createSQLQuery(queryStr);
 		query.setParameter("file_id", map.getId());
 		
+		@SuppressWarnings("unchecked")
 		List<Object[]> rows = query.list();
 		List<MonthlyExpense> result = new ArrayList<MonthlyExpense>();
 		for (Object[] row: rows) {
