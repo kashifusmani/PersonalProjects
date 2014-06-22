@@ -12,7 +12,9 @@ These instructions are for Ubuntu 12.04 . They may or may not work for other pla
  
 	- Download the code from github, place AddressBook under TOMCAT_HOME/webapps folder
 
-    - Edit AddressBook/setUpScript.sh and change APP_HOME and TOMCAT_HOME value appropriately, run/execute setUpScript.sh to setup appropriate classpaths and create binaries
+    - Edit AddressBook/setUpScript.sh and change APP_HOME and TOMCAT_HOME value appropriately with absolute path
+      For example, APP_HOME should be absolute path of webapps/AddressBook folder.
+      Run/execute setUpScript.sh to setup appropriate classpaths and create binaries. You may need to chmod to make it executable.
 
 3. OpenID/Google Login
 

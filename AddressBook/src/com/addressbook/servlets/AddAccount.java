@@ -23,7 +23,7 @@ public class AddAccount extends HttpServlet {
 
 	private final Log logger = LogFactory.getLog(getClass());
 	private UserAccountHandler userAcctHandler;
-	private final String userNameExistsError = "The username you entered already exists, please try a different one! ";
+	private final String userNameExistsError = "The email you entered already exists, please try a different one! ";
 	private final String userRegistrationSuccessMessage = "You have successfully registered. Please login now.";
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) {
